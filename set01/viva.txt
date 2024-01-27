@@ -1,0 +1,25 @@
+what is gcc?
+compilers for c language c source file to executable 
+preprocessor of gcc will process lines starting with #
+
+what do you mean by process?
+
+
+#include<stdio.h>
+(#- preprocessor of gcc, include - 
+
+directives are those 
+
+what is #?
+A PREPROCESSING DIRECTIVE 
+
+what is stdio.h?
+A HEADER FILE CONTAINING FUNCTION PROTOTYPE
+
+what is complier?
+
+what is preprocessor?
+what is the effect of #include<stdio.h>?
+what is fuction prototypes?
+what is debugging?
+
