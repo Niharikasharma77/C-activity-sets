@@ -1,0 +1,59 @@
+(gdb) b 28
+Breakpoint 1 at 0x4014d3: file C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c, line 28.
+(gdb) b 35
+Breakpoint 2 at 0x40150b: file C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c, line 35.
+(gdb) b 40
+Breakpoint 3 at 0x401521: file C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c, line 40.
+(gdb) b 19
+Breakpoint 4 at 0x40146e: file C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c, line 19.
+(gdb) r
+Starting program: C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01/.\problem04.exe 
+[New Thread 1372.0x35c0]
+[New Thread 1372.0x49bc]
+
+Breakpoint 4, main () at C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c:19
+warning: Source file is more recent than executable.
+19          input(&a,&b);
+(gdb) step
+input (a=0x61ff1c, b=0x61ff18) at C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c:27
+27          printf("enter the first number:");
+(gdb) n
+enter the first number:
+Breakpoint 1, input (a=0x61ff1c, b=0x61ff18) at C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c:28
+28          scanf("%d",a);
+(gdb) n
+13
+29          printf("enter the second number:");
+(gdb) n
+enter the second number:30          scanf("%d",b);
+(gdb) n
+23
+31      }
+(gdb) n
+main () at C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c:20
+20          add(a,b,&sum);
+(gdb) step
+
+Breakpoint 2, add (a=13, b=23, sum=0x61ff14) at C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c:35
+35          *sum=a+b;
+(gdb) n
+36      }
+(gdb) p *sum
+$1 = 36
+(gdb) p a
+$2 = 13
+(gdb) p b
+$3 = 23
+(gdb) n
+main () at C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c:21
+21          output(a,b,sum);
+(gdb) n
+
+Breakpoint 3, output (a=13, b=23, sum=36) at C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c:40
+40          printf("The sum of %d and %d is %d \n",a,b,sum);
+(gdb) n
+The sum of 13 and 23 is 3641     }
+(gdb) n
+main () at C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set01\problem04.c:22
+22          return 0;
+(gdb) q
