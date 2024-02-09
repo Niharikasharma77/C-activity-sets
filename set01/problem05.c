@@ -39,9 +39,9 @@ int compare(int a,int b,int c)
     }
 }
 
-void ouput(int a,int b,int c,int largest)
+void output(int a,int b,int c,int largest)
 {
-    printf("the largest of %d,%d.%d is %d ",a,b,c,largest);
+    printf("the largest of %d,%d,%d is %d ",a,b,c,largest);
 }
  int main()
  {
