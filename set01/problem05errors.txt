@@ -1,1 +1,1 @@
-NO ERRORS
+gcc problem05.c -O0 -g

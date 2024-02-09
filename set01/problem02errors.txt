@@ -1,1 +1,1 @@
-NO ERRORS
+gcc problem02.c -O0 -g
