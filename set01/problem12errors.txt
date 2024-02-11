@@ -1,0 +1,1 @@
+gcc problem12.c -O0 -g
