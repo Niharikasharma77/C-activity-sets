@@ -9,15 +9,16 @@ struct _complex {
 typedef struct _complex Complex;
 
 Complex input_complex();
-Complex add_complex(Complex a, Complex b);
-void output(Complex a, Complex b, Complex sum);
+Complex add_complex(Complex a,Complex b);
+void output(Complex a,Complex b,Complex sum);
 ```
 */
 #include<stdio.h>
-struct _complex{
+struct _complex
+{
     float real;
     float imaginary;
-}
+};
 typedef struct _complex Complex;
 
 Complex input_complex();
@@ -31,6 +32,7 @@ Complex input_complex()
     scanf("%f",&c.real);
     printf("enter the imaginary part:");
     scanf("%f",&c.imaginary);
+    return c;
 }
 
 Complex add_complex(Complex a,Complex b)
@@ -49,8 +51,8 @@ void output(Complex a,Complex b,Complex sum)
 int main()
 {
     Complex a,b,sum;
-    a=input();
-    b=input();
+    a=input_complex();
+    b=input_complex();
     sum=add_complex(a,b);
     output(a,b,sum);
     return 0;

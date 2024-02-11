@@ -47,7 +47,7 @@ void input_n_complex(int n,Complex c[n])
 {
     for (int i=0;i<n;i++)
     {
-        c[i]=input_complex;
+        c[i]=input_complex();
     }
 }
 
