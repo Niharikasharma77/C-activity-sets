@@ -49,10 +49,10 @@ void output(int a, int b, int c, int isscalene)
 {
     if(isscalene==0)
     {
-        printf("The triangle is scalene with sides %d,%d and %d.\n",a,b,c);
+        printf("The triangle is scalene with sides %d,%d and %d\n",a,b,c);
     }
     else if(isscalene==1)
     {
-        printf("the triangle is not scalene with sides %d,%d and %d.",a,b,c);
+        printf("the triangle is not scalene with sides %d,%d and %d",a,b,c);
     }
 }
