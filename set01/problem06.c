@@ -17,7 +17,6 @@ int main()
     input(&a,&b,&c);
     compare(a,b,c,&largest);
     output(a,b,c,largest);
-    return 0;
 }
 
 void input(int *a,int *b,int *c)
