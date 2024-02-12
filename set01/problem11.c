@@ -14,12 +14,11 @@ void output(Complex a,Complex b,Complex sum);
 ```
 */
 #include<stdio.h>
-struct _complex
+typedef struct _complex
 {
     float real;
     float imaginary;
-};
-typedef struct _complex Complex;
+}Complex;
 
 Complex input_complex();
 Complex add_complex(Complex a,Complex b);
