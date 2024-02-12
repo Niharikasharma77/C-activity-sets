@@ -1,0 +1,1 @@
+gcc problem01.c -O0 -g
