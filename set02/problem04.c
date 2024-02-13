@@ -7,3 +7,5 @@ void input_array(int n, int a[n]);
 int sum_composite_numbers(int n, int a[n]);
 void output(int sum);
 ```*/
+
+#include <stdio.h>
