@@ -1,0 +1,1 @@
+PS C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02> gcc problem06.c -O0 -g
