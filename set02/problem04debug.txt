@@ -1,3 +1,4 @@
+PS C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02> gcc problem04.c -O0 -g
 PS C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02> gdb a.exe
 GNU gdb (GDB) 7.6.1
 Copyright (C) 2013 Free Software Foundation, Inc.
@@ -10,39 +11,36 @@ For bug reporting instructions, please see:
 <http://www.gnu.org/software/gdb/bugs/>...
 Reading symbols from C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02\a.exe...done.
 (gdb) b main
-Breakpoint 1 at 0x40146f
+Breakpoint 1 at 0x401477: file problem04.c, line 18.
 (gdb) r
 Starting program: C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02/a.exe 
-[New Thread 17816.0x3680]
-[New Thread 17816.0x3a18]
+[New Thread 18668.0x46f0]
+[New Thread 18668.0x353c]
 
-Breakpoint 1, 0x0040146f in main ()
+Breakpoint 1, 0x00401477 in main () at problem04.c:18
+18      {
 (gdb) n
-Single stepping until exit from function main,
-which has no line number information.
-enter the array size:4
-enter the number:9
-8
-7
-6
-the sum is 23
+19          int n = input_array_size();
+(gdb) n
+enter the array size:2
+20          int a[n];
+(gdb) n
+21          input_array(n,a);
+(gdb) n
+enter the number:1
+2
+22          int sum = sum_composite_numbers(n,a);
+(gdb) n
+23          output(sum);
+(gdb) n
+the sum is 0
+24      }
+(gdb) n
 0x00401288 in __register_frame_info ()
-(gdb) n
-Single stepping until exit from function __register_frame_info,
-which has no line number information.
-0x0040128a in __register_frame_info ()
-(gdb) n
-Single stepping until exit from function __register_frame_info,
-which has no line number information.
-0x0040128f in __register_frame_info ()
-(gdb) n
-Single stepping until exit from function __register_frame_info,
-which has no line number information.
-0x00401292 in __register_frame_info ()
 (gdb) q
 A debugging session is active.
 
-        Inferior 1 [process 17816] will be killed.
+        Inferior 1 [process 18668] will be killed.
 
 Quit anyway? (y or n) y
 error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
