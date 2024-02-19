@@ -1,0 +1,60 @@
+PS C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02> gcc problem08.c -O0 -g
+PS C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401479: file problem08.c, line 33.
+(gdb) r
+Starting program: C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set02/a.exe
+[New Thread 19552.0x3bec]
+[New Thread 19552.0x3d2c]
+
+Breakpoint 1, 0x00401479 in main () at problem08.c:33
+33      {
+(gdb) n
+34              int n=input_n();
+(gdb) n
+enter the number of Triangles:2
+35              Triangle t[n];
+(gdb) n
+36              input_n_triangles(n,t);
+(gdb) n
+triangle 1:Enter the Base of the triangle: 2.2
+Enter the altitude of the triangle:3.3
+triangle 2:Enter the Base of the triangle: 4.4
+Enter the altitude of the triangle:5.5
+37              find_n_areas(n,t);
+(gdb) n
+38              Triangle smallest=find_smallest_triangle(n,t);
+(gdb) n
+39              output(n,t,smallest);
+(gdb) n
+the number of triangles are 2
+smallest triangle is:
+base is 2.200000
+altitude is 3.300000
+area is 3.630000
+40              return 0;
+(gdb) n
+41      }
+(gdb) n
+0x00401288 in __register_frame_info ()
+(gdb) n
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 19552] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
