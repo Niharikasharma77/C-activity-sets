@@ -9,38 +9,20 @@ void output(char *a, char *reverse_a);
 */
 
 #include<stdio.h>
-#include<string.h>
-void input_string(char *a);
-void str_reverse(char *str, char *rev_str);
-void output(char *a, char *reverse_a);
 
+//wap to change the value of the variable in the main function
+
+int input(int *n);
 int main()
 {
-    char str[100],reverse_str[100];
-    input_string(str);
-    str_reverse(str, reverse_str);
-    output(str, reverse_str);
-    return 0;
+   
+    int a=4;
+    printf("%d",a);
+    input(&a);
+    printf("%d",a);
 }
 
-void input_string(char *a)
+int input(int *n)
 {
-    printf("enter the string:");
-    scanf("%s",a);
-}
-
-void str_reverse(char *str, char *rev_str)
-{
-    int len = strlen(str);
-    for(int i=0;i<len;i++)
-    {
-        rev_str[i]=str[len-1-i];
-    }
-    rev_str[len]='\0';
-}
-
-void output(char *a, char *reverse_a)
-{   
-    printf("Original string: %s\n",a);
-    printf("Reversed string: %s\n", reverse_a);
+    *n=7;
 }
