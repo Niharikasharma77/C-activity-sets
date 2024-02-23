@@ -64,7 +64,7 @@ void input_n_triangles(int n,Triangle t[n])
 	{
 		printf("triangle %d:",i+1);
 		t[i]=input_triangle();
-	}
+	}++
 }
 
 void find_area(Triangle *t)
