@@ -1,0 +1,51 @@
+PS C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set03> gcc problem02.c -O0 -g
+PS C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set03> gdb a.exe
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set03\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem02.c, line 19.
+(gdb) r
+Starting program: C:\Users\7niha\OneDrive\Documents\GitHub\C-activity-sets\set03/a.exe
+[New Thread 24076.0x6f98]
+[New Thread 24076.0x1414]
+
+Breakpoint 1, main () at problem02.c:19
+19          input_triangle(&x1, &y1, &x2, &y2,&x3, &y3);
+(gdb) n
+Enter the point x1 and y1:
+1
+1
+Enter the point x2 and y2:
+0
+0
+Enter the point x3 and y3:
+1
+1
+20          int result=is_triangle(x1,y1,x2,y2,x3,y3);
+(gdb) n
+21          output(x1,y1,x2,y2,x3,y3,result);
+(gdb) n
+not a triangle22            return 0;
+(gdb) n
+23      }
+(gdb) n
+0x00401288 in __register_frame_info ()
+(gdb) n
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 24076] will be killed.
+
+Quit anyway? (y or n) y
+error return ../../gdb-7.6.1/gdb/windows-nat.c:1275 was 5
