@@ -8,6 +8,7 @@ void output(float x1, float y1, float x2, float y2,float x3, float y3, int resul
 ```*/
 
 #include<stdio.h>
+#include<math.h>
 void input_triangle(float *x1, float *y1, float *x2, float *y2, float *x3, float *y3);
 int is_triangle(float x1, float y1, float x2, float y2,float x3, float y3);
 void output(float x1, float y1, float x2, float y2,float x3, float y3, int result);
@@ -36,15 +37,25 @@ void  input_triangle(float *x1, float *y1, float *x2, float *y2, float *x3, floa
 
 int  is_triangle(float x1, float y1, float x2, float y2,float x3, float y3)
 {
-    int result;
-    if(0.5*(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)))
+    float a,b,c,d,e,f,d1,d2,d3;
+    a=pow(x2-x1,2); 
+    b=pow(x3-x1,2);
+    c=pow(x3-x2,2);
+    d=pow(y2-y1,2);
+    e=pow(y3-y2,2);
+    f=pow(y3-y1,2); 
+
+    d1=sqrt(a+d); 
+    d2=sqrt(b+f);
+    d3=sqrt(c+e);
+
+    if(d1+d2>d3 && d2+d3>d1 && d1+d3>d2)
     {
-        result==1;
+        return 1;
     }
     else{
-        result== 0;
+        return 0;
     }
-    return result;
 }
 
 void  output(float x1, float y1, float x2, float y2,float x3, float y3, int result)
@@ -53,7 +64,7 @@ void  output(float x1, float y1, float x2, float y2,float x3, float y3, int resu
     {
         printf("it is triangle");
     }
-    else if(result==0)
+    else
     {
         printf("not a triangle");
     }
