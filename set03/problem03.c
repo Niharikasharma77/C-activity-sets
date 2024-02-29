@@ -9,6 +9,7 @@ void output(int n, int result);
 */
 
 #include<stdio.h>
+#include<math.h>
 int input_number();
 int is_prime(int n);
 void output(int n, int result);
@@ -32,26 +33,22 @@ int input_number()
 
 int is_prime(int n)
 {
-    for(int i=1;i<=n;i++)
-    {
-        if(n%i==0)
-        {
-            return  0; // not prime
-            break;
+    for(int i=2;i<=n/2;i++){
+        if (n%i==0){
+            return 0;
         }
-        
     }
-    return 66;  
+    return 9;
 }
 
 void output(int n, int result)
 {
     if(result == 0)
     {
-        printf("\n%d is a prime number.",n);
+        printf("\n%d is a composite num.",n);
     }
     else
     {
-        printf("\n%d is not a prime number.",n);
+        printf("\n%d is a prime number.",n);
     }
 }
