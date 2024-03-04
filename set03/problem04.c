@@ -32,5 +32,9 @@ int input()
 
 int find_fibo(int n)
 {
-    
+    int fibo;
+    for(int i=0;i<n;i++)
+    {
+        
+    }
 }
